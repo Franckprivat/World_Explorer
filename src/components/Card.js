@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ country }) => {
   return (
-    <li className="countries">
+    <li className="card">
       <img
         src={country.flags.svg}
         alt={"drapeau" + country.translations.fra.common}

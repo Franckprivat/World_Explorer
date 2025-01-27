@@ -13,8 +13,10 @@ const Countries = () => {
 
     return (
         <div className='countries'>
-            <h1>COUNTRIES</h1>
-            <ul>
+        <ul className="radio-container">
+        <input type="range" min="1" max="250"/>
+        </ul>          
+          <ul>
                 {
                     data.map((country, index) => (
                     <Card key={index} country={country} />))
