@@ -26,7 +26,12 @@ const Countries = () => {
         </li>
       ))}
       <ul>
-        {data.filter((country) => country.continents[0].includes(selectedRadio)).slice(0, rangeValue).map((country, index) => (
+        {data
+        .filter((country) => country.continents[0]
+        .sort((a, b) => b.population - a.population)
+        .includes(selectedRadio))
+        .slice(0, rangeValue)
+        .map((country, index) => (
           <Card key={index} country={country} />
         ))}
       </ul>
